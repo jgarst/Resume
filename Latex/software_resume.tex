@@ -34,14 +34,14 @@
 
 \NewDocumentEnvironment{mysection}{m O{}}{
     \noindent
-    {\hspace{0.5em}\normalfont\large\bfseries #1} \hfill #2%
+    {\hspace{0.5em}\normalfont\LARGE #1} \hfill #2%
     \HRule{}
     \medskip
 }{\bigskip}
 
 \newenvironment{headedsection}[2]{
     \begin{addmargin}[0.5em]{0em}
-    \textscale{1.1}{#1}\hfill#2
+    {\large\bfseries #1} \hfill {\bfseries #2}%
     \begin{itemize}
         [label={}, topsep=0pt, itemsep=1.5pt, parsep=0pt, leftmargin=1.5em]
 }{
@@ -63,14 +63,14 @@
 
 \begin{mysection}{Experience}[Math \sbull Physics \sbull Programming \sbull Data \sbull Education]
 
-    \begin{headedsection}{Software Engineer \ --- \ \ 2017--2018}{Emerald Cloud Labs}
+    \begin{headedsection}{Software Engineer \ --- \ 2017--2018}{Emerald Cloud Labs}
         \item Wrote database tools for scientists with minimal coding experience
-        \item Maintained software stability while rewriting large and under tested systems
-        \item Generated executive buy in to get things done
+        \item Maintained software stability while rewriting large and under-tested systems
+        \item Solved project management problems, saw efforts through to completion
     \end{headedsection}
 
 \begin{headedsection}
-          {Member of the \href{http://www.physics.ucdavis.edu/fadleygroup/}{Fadley Group} \ ---\ \ 2013--2016}
+          {Member of the \href{http://www.physics.ucdavis.edu/fadleygroup/}{Fadley Group} \ --- \ 2013--2016}
           {University of California, Davis}
 
         \item Reconstructed electronic structure of materials by observing electrons ejected with x-rays
@@ -80,7 +80,7 @@
     \end{headedsection}
 
     \begin{headedsection}
-          {Physics Teaching Assistant  \ --- \ \ 2013--2016}
+          {Physics Teaching Assistant  \ --- \ 2013--2016}
           {University of California, Davis}
 
         \item Primary educator for physics courses of 12--70 students
@@ -89,7 +89,7 @@
     \end{headedsection}
 
     \begin{headedsection}
-          {Lab Assistant for Dean of Engineering, Arthur Ramirez}
+          {Lab Assistant \ --- \ 2012--2013}
           {University of California, Santa Cruz}
 
         \item Characterized novel materials with low temperature measurements
@@ -102,8 +102,9 @@
     \begin{headedsection}{Completed Google \href{https://news.ycombinator.com/item?id=8588080}{foo.bar}}
           {Level 3 programmer}
 
-        \item Allegedly equivalent to Google technical interview
-        \item Heavy use of algorithms, data structures, and math
+        \item Selected based on search history
+        \item Involved a series of programming puzzles leading to a Google interview
+        \item Heavy use of algorithms, data structures and math
     \end{headedsection}
 
     \begin{headedsection}{Python Journeyman}{}
@@ -146,12 +147,6 @@
 \begin{center}
     \href{https://github.com/jgarst}{https://github.com/jgarst} \sbull \href{jared.h.garst@gmail.com}{jared.h.garst@gmail.com} \sbull \href{https://www.linkedin.com/in/jgarst}{https://www.linkedin.com/in/jgarst}
 
-%\directlua{
-%    local handle = assert(io.popen('pass phone', 'r'))
-%    local phone = handle:read('*a')
-%    handle:close()
-%    tex.print(phone)
-%}
 \end{center}
 
 
