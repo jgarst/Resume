@@ -1,19 +1,24 @@
 
-tex := $(wildcard Latex/*.tex)
-pdf := $(patsubst Latex/%.tex,aux/%.pdf,$(tex))
-cover := $(filter Latex/%_cover.tex,$(tex))
-resume := $(patsubst Latex/%_cover.tex,pdfs/%_resume.pdf,$(cover))
+resume := $(wildcard Latex/*.tex)
+covers := $(wildcard Latex/covers/*.tex)
+company := $(patsubst Latex/covers/%.tex,%,$(covers))
+pdf := $(patsubst %,pdfs/%.pdf,$(company))
 
 .DEFAULT: all
-all: $(resume) pdfs/software_resume.pdf
+all: $(pdf) pdfs/software.pdf
 
-$(resume): pdfs/%_resume.pdf: aux/%_cover.pdf aux/software_resume.pdf | pdfs/
+$(company): %: pdfs/%.pdf
+
+$(pdf): pdfs/%.pdf: aux/%.pdf aux/software.pdf | pdfs/
 	pdftk $^ cat output $@
 
-pdfs/software_resume.pdf: aux/software_resume.pdf | pdfs/
+pdfs/software.pdf: aux/software.pdf | pdfs/
 	cp $^ $@
 
-$(pdf): aux/%.pdf: Latex/%.tex | aux/
+aux/software.pdf: Latex/software.tex | aux/
+	lualatex --output-directory aux $^
+
+aux/%.pdf: Latex/covers/%.tex | aux/
 	lualatex --output-directory aux $^
 
 pdfs/ aux/:

@@ -1,0 +1,75 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\setmainfont[Ligatures={Common, TeX}]{Linux Libertine O}
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+% blue links
+
+\usepackage{xpatch}
+\xpatchcmd{\makeletterclosing}{[3em]}{[0em]}{}{}
+
+% justified text
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\makeletterhead}
+    {\raggedright \@opening}
+    {\@opening}
+    {}{}
+\makeatother
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+
+% personal data
+\name{Jared}{Garst}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%-----       letter       ---------------------------------------------------------
+% recipient data
+\recipient{~}{~}
+\date{\today}
+\opening{Dear Citrine,}
+\closing{All the best,}
+\makelettertitle%
+
+I was pleased to find your posting for the Data Engineer position on the Hacker News job thread.
+Given my experience with surface physics, managing research data, and statistics, I think my skills are an excellent fit for the work.
+Please find my resume included, I'm excited to apply.
+
+I have worked independently to empower scientists with software for the past 3 years, and to become an expert at practical quantum mechanics for twice as long.
+I did my undergraduate thesis on simulations using density functional methods.
+In my research group, I made simple, usable technology decisions that kept our software working and the data flowing.
+When I was teaching advanced laboratory I saw that the `tell students to google it' strategy wasn't working for the python statistics sections, and filled that gap by writing them programming guides.
+My current job allows biologists to view their data across time, sample, or any other dimension they find productive.
+
+I am proud of this work, but think my communication successes are an even better recommendation for the position.
+My most productive time is spent talking with customers.
+I have saved countless hours by finding out what our users want and why they want it.
+I also spend lots of time helping people in mundane ways.
+I have taught basic git enough times that I can get people productive within one sitting, covering the concepts in concrete terms and keeping them engaged through the process.
+
+I look forward to bringing these abilities to my next job --- I sincerely hope it will be Citrine.
+
+\makeletterclosing%
+
+\end{document}
+
+
+%% end of file `template.tex'.
