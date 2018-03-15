@@ -24,6 +24,12 @@ aux/%.pdf: Latex/covers/%.tex | aux/
 pdfs/ aux/:
 	mkdir -p $@
 
-.PHONY: clean
+.PHONY: clean watch
 clean:
 	rm -rf aux pdfs
+
+watch:
+	while true; do \
+		make $(WATCHMAKE); \
+		inotifywait -qre close_write .; \
+	done
