@@ -32,7 +32,7 @@
   \noindent\rule{\linewidth}{0.4pt}\par
   \vspace*{\dimexpr-\parskip-.5\baselineskip+#1}}
 
-\NewDocumentEnvironment{mysection}{m O{}}{
+\NewDocumentEnvironment{mysection}{m O{}}{%
     \noindent
     {\hspace{0.5em}\normalfont\LARGE #1} \hfill #2%
     \HRule{}
@@ -61,7 +61,7 @@
 
 \vspace{1em}
 
-\begin{mysection}{Experience}[Math \sbull Physics \sbull Programming \sbull Data \sbull Education]
+\begin{mysection}{Experience}[Data \sbull{} Software \sbull{} Math \sbull{} Physics \sbull{} Education]
 
     \begin{headedsection}{Software Engineer \ --- \ 2017--2018}{Emerald Cloud Labs}
         \item Wrote database tools for scientists with minimal coding experience
