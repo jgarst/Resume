@@ -12,11 +12,9 @@ $(company): %: pdfs/%.pdf
 $(pdf): pdfs/%.pdf: pdfs/covers/%.pdf pdfs/software.pdf | pdfs/
 	pdftk $^ cat output $@
 
-pdfs/software.pdf: Latex/software.tex | latex.out/ pdfs/
-	latexrun --latex-cmd lualatex -o pdfs/software.pdf $^
-
-pdfs/covers/%.pdf: Latex/covers/%.tex | latex.out/ pdfs/covers/
-	latexrun --latex-cmd lualatex -o $@ $^
+pdfs/%.pdf: Latex/%.tex | latex.out/ pdfs/covers/
+	env TEXINPUTS=".:./lib//:" \
+		latexrun --latex-cmd lualatex -o $@ $^
 
 pdfs/ pdfs/covers/ latex.out/:
 	mkdir -p $@
