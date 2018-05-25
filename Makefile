@@ -9,24 +9,21 @@ all: $(pdf) pdfs/software.pdf
 
 $(company): %: pdfs/%.pdf
 
-$(pdf): pdfs/%.pdf: aux/%.pdf aux/software.pdf | pdfs/
+$(pdf): pdfs/%.pdf: pdfs/covers/%.pdf pdfs/software.pdf | pdfs/
 	pdftk $^ cat output $@
 
-pdfs/software.pdf: aux/software.pdf | pdfs/
-	cp $^ $@
+pdfs/software.pdf: Latex/software.tex | latex.out/ pdfs/
+	latexrun --latex-cmd lualatex -o pdfs/software.pdf $^
 
-aux/software.pdf: Latex/software.tex | aux/
-	lualatex --output-directory aux $^
+pdfs/covers/%.pdf: Latex/covers/%.tex | latex.out/ pdfs/covers/
+	latexrun --latex-cmd lualatex -o $@ $^
 
-aux/%.pdf: Latex/covers/%.tex | aux/
-	lualatex --output-directory aux $^
-
-pdfs/ aux/:
+pdfs/ pdfs/covers/ latex.out/:
 	mkdir -p $@
 
 .PHONY: clean watch
 clean:
-	rm -rf aux pdfs
+	latexrun --clean-all
 
 watch:
 	while true; do \
