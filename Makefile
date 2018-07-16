@@ -10,7 +10,7 @@ all: $(pdf) pdfs/software.pdf
 $(company): %: pdfs/%.pdf
 
 $(pdf): pdfs/%.pdf: pdfs/covers/%.pdf pdfs/software.pdf | pdfs/
-	pdftk $^ cat output $@
+	pdfjam --outfile $@ $^
 
 pdfs/%.pdf: Latex/%.tex | latex.out/ pdfs/covers/
 	env TEXINPUTS=".:./lib//:" \
