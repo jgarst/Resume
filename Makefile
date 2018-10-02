@@ -9,7 +9,7 @@ all: $(pdf) pdfs/software.pdf
 
 $(company): %: pdfs/%.pdf
 
-$(pdf): pdfs/%.pdf: pdfs/covers/%.pdf pdfs/software.pdf | pdfs/
+$(pdf): pdfs/%.pdf: pdfs/covers/%.pdf pdfs/software.pdf pdfs/hardware.pdf | pdfs/
 	pdfjam --outfile $@ $^
 
 pdfs/%.pdf: Latex/%.tex | latex.out/ pdfs/covers/
