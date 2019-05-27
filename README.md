@@ -1,1 +1,1 @@
-[Resume](https://github.com/jgarst/Resume/releases/download/2019-05-27/software.pdf) for Jared Garst - using a modified template from [Cies Breijs](https://rawgithub.com/cies/resume/master/cies-breijs-resume.pdf).
+[Resume](https://github.com/jgarst/Resume/releases/download/2019-05-27_2/software.pdf) for Jared Garst - using a modified template from [Cies Breijs](https://rawgithub.com/cies/resume/master/cies-breijs-resume.pdf).
