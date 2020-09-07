@@ -1,0 +1,10 @@
+Started Dec 2019
+
+Migrated a critical but unmaintained 51 step data pipeline to a new query engine and ETL system, validating every row and fixing half a dozen arcane bugs in the process.
+Saved weeks of engineering time in the migration project through a deep understanding of Looker, by creating cross-database Looker models.
+Unblocked company wide KR by understanding our data model well enough to piece together answers from 3 upstream systems across years of heterogeneous data.
+Pushed the team to adopt much needed documentation habits, resulting in a much more legible system.  * what does this mean
+Maintains a data warehouse with 4 legacy ETL systems, all unloved and grumpy.
+Point of contact for multiple teams of analysts for questions of data availability, sources and meaning.
+
+
