@@ -52,6 +52,25 @@
 
 \newcommand{\mytilde}{\raise.17ex\hbox{$\scriptstyle\sim$}}
 
+\newcommand{\archive}{https://web.archive.org/web}
+
+\newcommand{\FadleyGroup}{
+  \href{\archive/20201001085257/http://fadley.physics.ucdavis.edu/}
+       {Fadley Group}
+}
+
+\newcommand{\Noisebridge}{
+  \href{https://www.noisebridge.net/}{Noisebridge}.
+}
+
+\newcommand{\ComputationalPhysics}{
+  \href{http://young.physics.ucsc.edu/115/}{Computational Physics}
+}
+
+\newcommand{\MathematicalMethods}{
+  \href{http://scipp.ucsc.edu/~haber/ph116C/}{Mathematical Methods}
+}
+
 \begin{document}
 \sloppy  % relax whitespace in favor of straight margins
 
@@ -67,47 +86,79 @@
     \textbullet{} Education
 ]
 
-    \begin{headedsection}{Software Engineer \ --- \ 2019}{Pathrise}
-        \item Python expert in a software engineering mentorship and placement program.
-        \item Designed and implemented text search to categorize job listings.
-        \item Wrote subtle PostgreSQL indexes to create a 50--100x speedup on text searches.
-        \item Defined data infrastructure and schemas.  Wrote automated ETL to clean and validate new data sources.
-        \item Created data curriculum, including SQL, pandas, probability and open ended statistical modeling problems.
-    \end{headedsection}
+  \begin{headedsection}
+        {Software Egnineer, Data}
+        {2019--current, Grand Rounds}
 
-    \begin{headedsection}
-        {Software Engineer \ --- \ 2017--2018}{Emerald Cloud Labs}
+    \item Migrated critical but unmaintained 51 step data pipeline to a new
+          query engine and ETL system.
 
-        \item Implemented an ORM that powered experiments and data retrieval in an automated biology lab.
-        \item Created hundreds of unit tests, many integration tests and some property based tests.
-        \item Maintained and improved software stability in large and under-tested systems.
-        \item Wrote documentation and designs for scientists with minimal coding experience.
-        \item Solved project management problems, saw efforts through to completion.
-    \end{headedsection}
+  \end{headedsection}
 
-    \begin{headedsection}
-          {Graduate Researcher, \href{http://www.physics.ucdavis.edu/fadleygroup/}{Fadley Group}
-             \ --- \ 2013--2016}
-          {University of California, Davis}
+  \begin{headedsection}
+        {Software Engineer}
+        {2019, Pathrise}
 
-        \item Reconstructed electronic structure of materials by observing electrons ejected with x-rays.
-        \item Collected and performed statistical analysis on gigabyte-sized lists of electron strikes.
-        \item Refactored and deployed simulation codes in Python, C, Matlab, and Fortran.
-        \item Acted as group sysadmin, provisioning servers and teaching coding skills.
-    \end{headedsection}
+    \item Python expert in a software engineering mentorship and placement
+          program.
+    \item Designed and implemented text search to categorize job listings.
+    \item Wrote subtle PostgreSQL indexes to create a 50--100x speedup on text
+          searches.
+    \item Defined data infrastructure and schemas.
+          Wrote automated ETL to clean and validate new data sources.
+    \item Created data curriculum, including SQL, pandas, probability and open
+          ended statistical modeling problems.
+
+  \end{headedsection}
+
+  \begin{headedsection}
+        {Software Engineer}
+        {2017--2018, Emerald Cloud Labs}
+
+    \item Implemented an ORM that powered experiments and data retrieval in an
+          automated biology lab.
+    \item Created hundreds of unit tests, many integration tests and some
+          property based tests.
+    \item Maintained and improved software stability in large and under-tested
+          systems.
+    \item Wrote documentation and designs for scientists with minimal coding
+          experience.
+    \item Solved project management problems, saw efforts through to completion.
+
+  \end{headedsection}
+
+  \begin{headedsection}
+        {Graduate Researcher, \FadleyGroup}
+        {2013--2016, University of California, Davis}
+
+    \item Reconstructed electronic structure of materials by observing
+          electrons ejected with x-rays.
+    \item Collected and performed statistical analysis on gigabyte-sized lists
+          of electron strikes.
+    \item Refactored and deployed simulation codes in Python, C, Matlab, and
+          Fortran.
+    \item Acted as group sysadmin, provisioning servers and teaching coding
+          skills.
+
+  \end{headedsection}
 
 \end{mysection}
 
 \begin{mysection}{Projects}[
-    Python \textbullet{} C \textbullet{} Linux \textbullet{} SQL \textbullet{} Git
+  Python \textbullet{} C \textbullet{} Linux \textbullet{} SQL \textbullet{} Git
 ]
 
-    \begin{headedsection}{Python Educator}{2018 -- 2019}
-        \item Organizes and teaches a weekly introductory Python class at \href{https://www.noisebridge.net/}{Noisebridge}.
-        \item Class is well loved by the community, and has helped roughly 100 people over the past year.
-        \item Teaches to a broad range of backgrounds.  The last class helped biologists, junior developers and the retired.
-        \item Wrote Jupyter Notebook based curriculum covering a range of skills: regex, SQL, testing, and Flask.
-    \end{headedsection}
+  \begin{headedsection}{Python Educator}{2018--current}
+    \item Organizes and teaches a weekly introductory Python class at
+          \Noisebridge{}
+    \item Class is well loved by the community, and has helped roughly 100
+          people over the past year.
+    \item Teaches to a broad range of backgrounds.  The last class helped
+          biologists, junior developers and the retired.
+    \item Wrote Jupyter Notebook based curriculum covering a range of skills:
+          regex, SQL, testing, and Flask.
+
+  \end{headedsection}
 
 %   \begin{headedsection}{TripleByte Certified}
 %       \item Two hour intensive technical interview
@@ -116,52 +167,51 @@
 \end{mysection}
 
 \begin{mysection}{Education}
-    \begin{headedsection}{Masters --- Physics}
-          {University of California, Davis}
+  \begin{headedsection}{Masters --- Physics}
+        {University of California, Davis}
 
-        \item Advanced coursework in statistical, quantum and condensed matter
-            physics
-        \item Passed multi-day end of year exam with an excellent score
-    \end{headedsection}
+    \item Advanced coursework in statistical, quantum and condensed matter
+          physics.
+    \item Passed multi-day end of year exam with an excellent score.
 
-    \begin{headedsection}{Bachelor of Science --- Physics}
-          {University of California, Santa Cruz}
+  \end{headedsection}
 
-        \item Completed degree in 2.5 years with 3.86 in major GPA
-        \item Undergraduate thesis on density functional methods
-        \item Received top grade in many classes, including 
-            \href{http://young.physics.ucsc.edu/115/}{Computational Physics}
-            and
-            \href{http://scipp.ucsc.edu/~haber/ph116C/}{Mathematical Methods}
-    \end{headedsection}
+  \begin{headedsection}{Bachelor of Science --- Physics}
+        {University of California, Santa Cruz}
+
+    \item Completed degree in $2.5$ years with $3.86$ in major GPA.\@
+    \item Undergraduate thesis on density functional methods.
+    \item Received top grade in many classes, including \ComputationalPhysics{}
+          and \MathematicalMethods{}.
+
+  \end{headedsection}
 \end{mysection}
 
 \begin{mysection}{Skills}
 
-    \begin{addmargin}[0.5em]{0em}
-      \makebox[0pt][l]{\large\bfseries Fluent With:}
-      \phantom{\large\bfseries Software Fundamentals: \quad}
-      Python, Flask, pytest, pandas, NumPy, SciPy, SQL, PostgreSQL, git, bash,
-    \end{addmargin}
+  \begin{addmargin}[0.5em]{0em}
+    \makebox[0pt][l]{\large\bfseries Fluent With:}
+    \phantom{\large\bfseries Software Fundamentals: \quad}
+    Python, Flask, pytest, pandas, NumPy, SciPy, SQL, PostgreSQL, git, bash,
+  \end{addmargin}
 
-    \begin{addmargin}[0.5em]{0em}
-      \makebox[0pt][l]{}
-      \phantom{\large\bfseries Software Fundamentals: \quad}
-      statistics, Jupyter Notebooks, Looker
-    \end{addmargin}
+  \begin{addmargin}[0.5em]{0em}
+    \makebox[0pt][l]{}
+    \phantom{\large\bfseries Software Fundamentals: \quad}
+    statistics, Jupyter Notebooks, Looker
+  \end{addmargin}
 
-    \begin{addmargin}[0.5em]{0em}
-      \makebox[0pt][l]{\large\bfseries Software Fundamentals:}
-      \phantom{\large\bfseries Software Fundamentals: \quad}
-      OOP, REST APIs, unix/linux, database design, system design
-    \end{addmargin}
+  \begin{addmargin}[0.5em]{0em}
+    \makebox[0pt][l]{\large\bfseries Software Fundamentals:}
+    \phantom{\large\bfseries Software Fundamentals: \quad}
+    OOP, REST APIs, unix/linux, database design, system design
+  \end{addmargin}
 
-    \begin{addmargin}[0.5em]{0em}
-
+  \begin{addmargin}[0.5em]{0em}
     \makebox[0pt][l]{\large\bfseries Familiar With:}
-      \phantom{\large\bfseries Software Fundamentals: \quad}
-      C, C++, Java, Ruby, Rails, Airflow, Heroku, AWS, SQLAlchemy, Docker
-    \end{addmargin}
+    \phantom{\large\bfseries Software Fundamentals: \quad}
+    C, C++, Java, Ruby, Rails, Airflow, Heroku, AWS, SQLAlchemy, Docker
+  \end{addmargin}
 
 \end{mysection}
 
@@ -172,12 +222,12 @@
 \end{center}
 
 \begin{center}
-    \href{https://github.com/jgarst}{https://github.com/jgarst} 
-    \textbullet{} 
-    \href{jhg@fastmail.com}{jhg@fastmail.com}
-    \textbullet{} 
-    \href{https://www.linkedin.com/in/jgarst}
-        {https://www.linkedin.com/in/jgarst}
+  \href{https://github.com/jgarst}{https://github.com/jgarst} 
+  \textbullet{}
+  \href{jhg@fastmail.com}{jhg@fastmail.com}
+  \textbullet{}
+  \href{https://www.linkedin.com/in/jgarst}
+       {https://www.linkedin.com/in/jgarst}
 \end{center}
 
 \end{document}
