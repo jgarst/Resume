@@ -3,6 +3,7 @@ resume := $(wildcard Latex/*.tex)
 covers := $(wildcard Latex/covers/*.tex)
 company := $(patsubst Latex/covers/%.tex,%,$(covers))
 pdf := $(patsubst %,pdfs/%.pdf,$(company))
+viewer := mupdf
 
 .DEFAULT: all
 all: $(pdf) pdfs/software.pdf
@@ -26,5 +27,6 @@ clean:
 watch:
 	while true; do \
 		make $(WATCHMAKE); \
+		pkill -HUP $(viewer) ; \
 		inotifywait -qre close_write .; \
 	done
