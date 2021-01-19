@@ -26,6 +26,7 @@ pdfs/ pdfs/covers/ latex.out/:
 .PHONY: clean watch
 clean:
 	latexrun --clean-all
+	rm pdfs/*.pdf
 
 watch:
 	while true; do \
