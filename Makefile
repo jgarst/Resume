@@ -5,7 +5,10 @@ company := $(patsubst Latex/covers/%.tex,%,$(covers))
 pdf := $(patsubst %,pdfs/%.pdf,$(company))
 viewer := mupdf
 
-.DEFAULT: all
+.DEFAULT: base
+
+base: pdfs/software.pdf
+
 all: $(pdf) pdfs/software.pdf
 
 $(company): %: pdfs/%.pdf
