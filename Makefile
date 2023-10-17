@@ -31,6 +31,5 @@ clean:
 watch:
 	while true; do \
 		make $(WATCHMAKE); \
-		pkill -HUP $(viewer) ; \
 		inotifywait -qre close_write .; \
 	done

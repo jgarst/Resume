@@ -20,7 +20,12 @@
             citecolor={dark-blue},
             urlcolor={DarkGreen}}
 
-\setmainfont[Ligatures={Common, TeX}]{Linux Libertine O}
+
+%\setmainfont[
+%    Ligatures ={Common, TeX},
+%    Path      =/usr/share/fonts/ttf-linux-libertine/,
+%    Extension =.ttf
+%]{LinLibertine}
 \hyphenation{Some-long-word}
 \pagestyle{empty}
 \setlength{\tabcolsep}{0em}
@@ -39,11 +44,23 @@
     \medskip
 }{\bigskip}
 
+\newenvironment{worksection}[3]{
+    \begin{addmargin}[0.5em]{0em}
+    {\large\bfseries #1} \hfill {\bfseries #2}\\%
+    \hspace*{0ex}#3
+    \begin{itemize}
+        [label=-, topsep=0pt, itemsep=0.5ex, parsep=0pt, leftmargin=1em]
+}{
+    \end{itemize}
+    \end{addmargin}
+    \medskip
+}
+
 \newenvironment{headedsection}[2]{
     \begin{addmargin}[0.5em]{0em}
     {\large\bfseries #1} \hfill {\bfseries #2}%
     \begin{itemize}
-        [label={}, topsep=0pt, itemsep=1.5pt, parsep=0pt, leftmargin=1.5em]
+        [label=-, topsep=0pt, itemsep=0.5ex, parsep=0pt, leftmargin=1em]
 }{
     \end{itemize}
     \end{addmargin}
@@ -80,150 +97,161 @@
 
 \begin{mysection}{Experience}[
     Python
-    \textbullet{} ETL
-    \textbullet{} Data Engineering
+    \textbullet{} SQL
+    \textbullet{} Linux
+    \textbullet{} Operations
     \textbullet{} Analysis
-    \textbullet{} Modeling
+    \textbullet{} Resilience
 ]
 
-  \begin{headedsection}
+  \begin{worksection}
         {Senior Software Engineer, Data}
-        {2021--current, Afresh}
+        {2022--current, LaunchDarkly}
+        {Expanding a feature flagging product by refining pricing, marketing,
+         and product lines.}
 
-    \item Afresh minimizes food waste at grocery stores, by predicting how much produce they should order.
-    \item Creates resilient debuggable pipelines, in expectation of grocer data having timing and hygiene issues.
-    \item Integrates new customers, bridging quirks in their data with the assumptions of our model.
-    \item Creates low surprise interfaces by discovering how app and machine learning teams understand their data.
-    \item Mentors junior employees.  Provides a low stakes sounding board while working to level up team members.
-    \item Frames and scopes work, provides context and steers the team towards high impact areas.
+    \item Built most of the infrastructure for ingestion into an analytics
+          warehouse.
+    \\    Managed organic adoption by multiple other teams.
 
-  \end{headedsection}
+    \item Established and refined development operations - deployment, CI,
+          tagging compliance.
+    \\    Focused on team speed and effectiveness.
+          Widely praised for being a joy to work with.
 
-  \begin{headedsection}
+    \item Found and was sometimes point person for resolving a number of
+          emergencies.
+    \\    Incorrect billing numbers, emails not being sent,
+          an abandoned 15TB/month pipeline.
+
+  \end{worksection}
+
+  \begin{worksection}
+        {Senior Software Engineer, Data}
+        {2021--2022, Afresh}
+        {Minimized food waste at grocery stores by predicting how much produce
+         should be ordered.}
+
+    \item Created resilient pipelines, in anticipation of timing and hygiene
+          issues within the nightly data dump.
+    \item Integrated new customers, bridging quirks in their data with the
+          assumptions of our model.
+    \item Mentored junior employees.  Provided low stakes direction of effort
+          and sharpening of understanding.
+    \item Framed and scoped work, provided context and steered team towards
+          high impact areas.
+
+  \end{worksection}
+
+  \begin{worksection}
         {Software Engineer, Data}
         {2019--2021, Grand Rounds}
+        {Managed and maintained data resources for complex health care
+         organization.}
 
-    \item Combined heterogeneous data sources to deliver hygienic data on time,
+    \item Combined heterogeneous sources to deliver hygienic data on time,
           with usable interfaces and SLAs.
-    \item Developed the data model to answer qualitative questions from 4
-          distinct teams.
-    \item Migrated critical but unmaintained 51 step data pipeline to a new
-          query engine and ETL system.
-    \item Created systems that process sensitive personal health information through masking and aggregation.
-    %\item Started and fostered a practice of documentation and testing for
-    %      unloved processes.
+%   \item Developed the data model to answer qualitative questions from 4
+%         distinct teams.
+%   \item Migrated critical but unmaintained 51 step data pipeline to a new
+%         query engine and ETL system.
+    \item Created systems that process sensitive personal health information
+          through masking and aggregation.
+%   \item Started and fostered a practice of documentation and testing for
+%         unloved processes.
 
-  \end{headedsection}
+  \end{worksection}
 
-  \begin{headedsection}
-        {Software Engineer}
-        {2019, Pathrise}
 
-    \item Python expert in a software engineering mentorship and placement
-          program.
-    \item Created data curriculum, including SQL, pandas, probability and open
-          ended statistical modeling problems.
+    \begin{addmargin}[0.5em]{0em}
+    {\large\bfseries Software Engineer and Mentor}
+    \hfill {\bfseries 2019, Pathrise}\\%
+    \hspace*{0ex}Career Services and tutoring for new grad software engineers.
 
-  \end{headedsection}
+%   \begin{itemize}
+%       [label=-, topsep=0pt, itemsep=0.5ex, parsep=0pt, leftmargin=1em]
+%
+%   \item Python and statistics expert in a software engineering mentorship 
+%         and placement program.
+%
+%   \end{itemize}
 
-  \begin{headedsection}
+    \end{addmargin}
+    \medskip
+
+  \begin{worksection}
         {Software Engineer}
         {2017--2018, Emerald Cloud Labs}
+        {Software tools and data interfaces for an automated biology lab.}
 
     \item Implemented an ORM that powered experiments and data retrieval in an
           automated biology lab.
-    \item Created hundreds of unit tests, many integration tests and some
-          property based tests.
+%   \item Created hundreds of unit tests, many integration tests and some
+%         property based tests.
     \item Wrote documentation and designs for scientists with minimal coding
           experience.
-    %\item Solved project management problems, saw efforts through to completion.
+%   \item Solved project management problems, saw efforts through to completion.
 
-  \end{headedsection}
+  \end{worksection}
 
-  \begin{headedsection}
+  \begin{worksection}
         {Graduate Researcher, \FadleyGroup}
         {2013--2016, University of California, Davis}
+        {Experimental observation of material electronic structure.}
 
-    % \item Reconstructed electronic structure of materials by observing
-    %      electrons ejected with x-rays.
+%   \item Reconstructed electronic structure of materials by observing
+%         electrons ejected with x-rays.
     \item Collected and performed statistical analysis on gigabyte-sized lists
           of electron strikes.
-    \item Refactored and deployed simulation codes in Python, C, Matlab, and
-           Fortran.
-    %\item Acted as group sysadmin, provisioning servers and teaching coding
-    %      skills.
+%   \item Refactored and deployed simulation codes in Python, C, Matlab, and
+%          Fortran.
+%   \item Acted as group sysadmin, provisioning servers and teaching coding
+%         skills.
 
-  \end{headedsection}
+  \end{worksection}
 
 \end{mysection}
 
 \begin{mysection}{Projects}[
-    Python \textbullet{} Education \textbullet{} Linux \textbullet{} SQL
+    Education \textbullet{} Technical Communication \textbullet{} Community
 ]
 
-  \begin{headedsection}{Python Educator}{2018--current}
-    \item Organizes and teaches a weekly introductory Python class at
+\begin{worksection}
+     {Python Educator}
+     {2018--current}
+     {Years of teaching to many learning profiles and in many contexts.}
+    \item Currently runs a weekly working group with friends and family.
+    \\    Two members have transitioned into software engineering roles.
+    \item Organized and taught a weekly introductory Python class at
           \Noisebridge{}.
-    \item Teaches to a broad range of backgrounds, including biologists,
-          junior developers and the retired.
-    \item Wrote Jupyter Notebook based curriculum covering a range of skills:
-          regex, SQL, testing, and Flask.
+%   \item Has taught a broad range of backgrounds, including biologists,
+%         junior developers and the retired.
 
-  \end{headedsection}
+  \end{worksection}
 
-%   \begin{headedsection}{TripleByte Certified}
+%   \begin{worksection}{TripleByte Certified}
 %       \item Two hour intensive technical interview
-%   \end{headedsection}
+%   \end{worksection}
 
 \end{mysection}
 
 \begin{mysection}{Education}
-  \begin{headedsection}{Masters --- Physics}
-        {University of California, Davis}
-
+\begin{headedsection}
+      {PhD, did not finish --- Physics}
+      {University of California, Davis}
     \item Advanced coursework in statistical, quantum and condensed matter
           physics.
-    %\item Passed multi-day end of year exam with an excellent score.
+%   \item Passed multi-day end of year exam with an excellent score.
 
   \end{headedsection}
 
   \begin{headedsection}{Bachelor of Science --- Physics}
         {University of California, Santa Cruz}
-
-    \item Completed degree in $2.5$ years with $3.86$ in major GPA.\@
-    %\item Undergraduate thesis on density functional methods.
+    \item Completed degree in $2.5$ years with $3.86$ in major GPA.
     \item Received top grade in many classes, including \ComputationalPhysics{}
           and \MathematicalMethods{}.
 
   \end{headedsection}
-\end{mysection}
-
-\begin{mysection}{Skills}
-
-  \begin{addmargin}[0.5em]{0em}
-    \makebox[0pt][l]{\large\bfseries Fluent With:}
-    \phantom{\large\bfseries Software Fundamentals: \quad}
-    Python, Flask, pytest, pandas, NumPy, SciPy, SQL, PostgreSQL, Snowflake,
-  \end{addmargin}
-
-  \begin{addmargin}[0.5em]{0em}
-    \makebox[0pt][l]{}
-    \phantom{\large\bfseries Software Fundamentals: \quad}
-    git, bash, statistics, Jupyter Notebooks, Looker
-  \end{addmargin}
-
-  \begin{addmargin}[0.5em]{0em}
-    \makebox[0pt][l]{\large\bfseries Software Fundamentals:}
-    \phantom{\large\bfseries Software Fundamentals: \quad}
-    OOP, REST APIs, unix/linux, database design, system design
-  \end{addmargin}
-
-  \begin{addmargin}[0.5em]{0em}
-    \makebox[0pt][l]{\large\bfseries Familiar With:}
-    \phantom{\large\bfseries Software Fundamentals: \quad}
-    C, C++, Java, Ruby, Rails, Airflow, Heroku, AWS, SQLAlchemy, Docker
-  \end{addmargin}
-
 \end{mysection}
 
 \vfill
@@ -233,7 +261,7 @@
 \end{center}
 
 \begin{center}
-  \href{https://github.com/jgarst}{https://github.com/jgarst} 
+  \href{https://github.com/jgarst}{https://github.com/jgarst}
   \textbullet{}
   \href{mailto:jhg@fastmail.com}{jhg@fastmail.com}
   \textbullet{}
