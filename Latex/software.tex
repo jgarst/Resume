@@ -1,6 +1,7 @@
 \documentclass[11pt,a4paper]{article}
 \usepackage[a4paper,margin=0.75in]{geometry}
 \usepackage{scrextend}
+\usepackage{changepage}
 \usepackage{hyperref}
 \usepackage{amsmath}
 \usepackage[usenames,dvipsnames,svgnames]{xcolor}
@@ -104,73 +105,95 @@
     \textbullet{} Resilience
 ]
 
-  \begin{worksection}
-        {Senior Software Engineer, Data}
-        {2022--current, LaunchDarkly}
-        {Python -- SQL -- AWS -- Terraform -- dbt -- Snowflake -- Fivetran -- Airflow -- Looker}
-%       {Expanding a feature flagging product by refining pricing, marketing,
-%        and product lines.}
+  \begin{addmargin}[0.5em]{0em}
+    {\large\bfseries Senior Software Engineer, Data}%
+    \hfill {\bfseries 2022--current, LaunchDarkly}%
+    \begin{adjustwidth}{1ex}{0ex}
+      LaunchDarkly is expanding their feature flagging product by
+      refining sales, pricing, and product lines.\\
+      Python - SQL - AWS - Terraform - dbt - Snowflake - Fivetran - Airflow
+      - Looker
+
+      \begin{itemize}
+          [label=-, topsep=0pt, itemsep=0.5ex, parsep=0pt, leftmargin=1em]
+
+      \item Built most of the infrastructure for ingestion into our main
+            analytics warehouse.
+      \\    Managed organic adoption by multiple other teams.
+
+      \item Established and refined development operations - deployment, CI,
+            tagging compliance.
+      \\    Focused on team speed and effectiveness.
+            Widely praised for being a joy to work with.
+
+      \item Found and was sometimes point person for resolving a number of
+            emergencies.
+      \\    Incorrect billing numbers, emails not being sent,
+            an abandoned 15TB/month pipeline.
+
+      \end{itemize}
+
+    \end{adjustwidth}
+  \end{addmargin}
+  \medskip
 
 
-    \item Built most of the infrastructure for ingestion into our main analytics
-          warehouse.
-    \\    Managed organic adoption by multiple other teams.
+  \begin{addmargin}[0.5em]{0em}
+    {\large\bfseries Senior Software Engineer, Data}%
+    \hfill {\bfseries 2021--2022, Afresh}%
+    \begin{adjustwidth}{1ex}{0ex}
+      Afresh minimizes food waste at grocery stores by predicting how much
+      produce should be ordered.\\
+      Python - SQL - Spark - Snowflake
 
-    \item Established and refined development operations - deployment, CI,
-          tagging compliance.
-    \\    Focused on team speed and effectiveness.
-          Widely praised for being a joy to work with.
+      \begin{itemize}
+        [label=-, topsep=0pt, itemsep=0.5ex, parsep=0pt, leftmargin=1em]
+      \item Created resilient pipelines to account for timing and hygiene issues
+            within customer data.
+      \item Integrated new customers, bridging quirks in their data with the
+            assumptions of our model.
+      \item Mentored junior developers.  Provided low stakes direction of effort
+            and sharpening of understanding.
+      \item Framed and scoped work, provided context and steered team towards
+            high impact areas.
+      \end{itemize}
+    \end{adjustwidth}
+  \end{addmargin}
+  \medskip
 
-    \item Found and was sometimes point person for resolving a number of
-          emergencies.
-    \\    Incorrect billing numbers, emails not being sent,
-          an abandoned 15TB/month pipeline.
 
-  \end{worksection}
+  \begin{addmargin}[0.5em]{0em}
+    {\large\bfseries Software Engineer, Data}%
+    \hfill {\bfseries 2019--2021, Included Health}%
+      \begin{adjustwidth}{1ex}{0ex}
+      Managed and maintained data resources for a complex health care
+      organization.\\
+      SQL - Redshift - Looker
 
-  \begin{worksection}
-        {Senior Software Engineer, Data}
-        {2021--2022, Afresh}
-        {Python -- SQL -- Spark -- Snowflake}
-%       {Minimized food waste at grocery stores by predicting how much produce
-%        should be ordered.}
-
-    \item Created resilient pipelines, in anticipation of timing and hygiene
-          issues within the load of customer data.
-    \item Integrated new customers, bridging quirks in their data with the
-          assumptions of our model.
-    \item Mentored junior developers.  Provided low stakes direction of effort
-          and sharpening of understanding.
-    \item Framed and scoped work, provided context and steered team towards
-          high impact areas.
-
-  \end{worksection}
-
-  \begin{worksection}
-        {Software Engineer, Data}
-        {2019--2021, Grand Rounds}
-        {SQL -- Redshift -- Looker}
-%       {Managed and maintained data resources for complex health care
-%        organization.}
-
-    \item Combined heterogeneous sources to deliver hygienic data on time,
+      \begin{itemize}
+        [label=-, topsep=0pt, itemsep=0.5ex, parsep=0pt, leftmargin=1em]
+      \item Combined heterogeneous sources to deliver hygienic data on time,
           with usable interfaces and SLAs.
-%   \item Developed the data model to answer qualitative questions from 4
-%         distinct teams.
-%   \item Migrated critical but unmaintained 51 step data pipeline to a new
-%         query engine and ETL system.
-    \item Created systems that process sensitive personal health information
-          through masking and aggregation.
-%   \item Started and fostered a practice of documentation and testing for
-%         unloved processes.
-
-  \end{worksection}
+%     \item Developed the data model to answer qualitative questions from 4
+%           distinct teams.
+%     \item Migrated critical but unmaintained 51 step data pipeline to a new
+%           query engine and ETL system.
+      \item Created systems that process sensitive personal health information
+            through masking and aggregation.
+%     \item Started and fostered a practice of documentation and testing for
+%           unloved processes.
+      \end{itemize}
+      \end{adjustwidth}
+    \end{addmargin}
+    \medskip
 
 
     \begin{addmargin}[0.5em]{0em}
     {\large\bfseries Software Engineer and Mentor}
-    \hfill {\bfseries 2019, Pathrise}\\%
-    \hspace*{0ex}Career Services and tutoring for new grad software engineers.
+    \hfill {\bfseries 2019, Pathrise}%
+      \begin{adjustwidth}{1ex}{0ex}
+      \hspace*{0ex}Career Services and tutoring for new grad software engineers.
+      \end{adjustwidth}
 
 %   \begin{itemize}
 %       [label=-, topsep=0pt, itemsep=0.5ex, parsep=0pt, leftmargin=1em]
@@ -180,38 +203,49 @@
 %
 %   \end{itemize}
 
-    \end{addmargin}
-    \medskip
+  \end{addmargin}
+  \medskip
 
-  \begin{worksection}
-        {Software Engineer}
-        {2017--2018, Emerald Cloud Labs}
-        {Software tools and data interfaces for an automated biology lab.}
 
-    \item Implemented an ORM that powered biology experiments and data retrieval.
-%   \item Created hundreds of unit tests, many integration tests and some
-%         property based tests.
-    \item Wrote documentation and designs for scientists with minimal coding
-          experience.
-%   \item Solved project management problems, saw efforts through to completion.
+  \begin{addmargin}[0.5em]{0em}
+    {\large\bfseries Software Engineer}%
+    \hfill {\bfseries 2017--2018, Emerald Cloud Labs}%
+    \begin{adjustwidth}{1ex}{0ex}
+      Software tools and interfaces for an automated biology lab.
 
-  \end{worksection}
+      \begin{itemize}
+        [label=-, topsep=0pt, itemsep=0.5ex, parsep=0pt, leftmargin=1em]
+      \item Implemented an ORM that powered biology experiments and data
+            retrieval.
+%     \item Created hundreds of unit tests, many integration tests and some
+%           property based tests.
+      \item Wrote documentation and designs for scientists with minimal coding
+            experience.
+%     \item Solved project management problems, saw efforts through to
+%           completion.
+      \end{itemize}
+    \end{adjustwidth}
+  \end{addmargin}
 
-  \begin{worksection}
-        {Graduate Researcher, \FadleyGroup}
-        {2013--2016, University of California, Davis}
-        {Experimental observation of material electronic structure.}
 
+%  \begin{addmargin}[0.5em]{0em}
+%    {\large\bfseries Graduate Researcher, \FadleyGroup}
+%    \hfill {\bfseries 2013--2016, University of California, Davis}\\
+%    Experimental observation of material electronic structure.
+
+%    \begin{itemize}
+%      [label=-, topsep=0pt, itemsep=0.5ex, parsep=0pt, leftmargin=1em]
 %   \item Reconstructed electronic structure of materials by observing
 %         electrons ejected with x-rays.
-    \item Collected and performed statistical analysis on gigabyte-sized lists
-          of electron strikes.
+%    \item Collected and performed statistical analysis on gigabyte-sized lists
+%          of electron strikes.
 %   \item Refactored and deployed simulation codes in Python, C, Matlab, and
 %          Fortran.
 %   \item Acted as group sysadmin, provisioning servers and teaching coding
 %         skills.
+%    \end{itemize}
+%  \end{addmargin}
 
-  \end{worksection}
 
 \end{mysection}
 
@@ -219,19 +253,26 @@
     Education \textbullet{} Technical Communication \textbullet{} Community
 ]
 
-\begin{headedsection}
-     {Python Educator}
-     {2018--current}
 
-    \item Years of teaching to many learning profiles and in many contexts.
-    \item Currently runs a weekly working group with friends and family.
-    \\    Two members have transitioned into software engineering roles.
-    \item Organized and taught a weekly introductory Python class at
-          \Noisebridge{}.
-%   \item Has taught a broad range of backgrounds, including biologists,
-%         junior developers and the retired.
+  \begin{addmargin}[0.5em]{0em}
+    {\large\bfseries Python Educator} \hfill {\bfseries 2018--current}%
+    \begin{adjustwidth}{1ex}{0ex}
 
-  \end{headedsection}
+    Years of teaching to many learning profiles and in many contexts.
+    \begin{itemize}
+        [label=-, topsep=0pt, itemsep=0.5ex, parsep=0pt, leftmargin=1em]
+
+      \item Responsible for Python material in advanced physics labs.
+      \item Organized and taught a weekly introductory Python class at
+            \Noisebridge
+      \item Currently runs a weekly working group with friends and family.
+%     \item Has taught a broad range of backgrounds, including biologists,
+%           junior developers and the retired.
+
+    \end{itemize}
+    \end{adjustwidth}
+  \end{addmargin}
+  \medskip
 
 %   \begin{worksection}{TripleByte Certified}
 %       \item Two hour intensive technical interview
@@ -240,29 +281,41 @@
 \end{mysection}
 
 \begin{mysection}{Education}
-\begin{headedsection}
-      {PhD, did not finish --- Physics}
-      {University of California, Davis}
-    \item Advanced coursework in statistical, quantum and condensed matter
-          physics.
-%   \item Passed multi-day end of year exam with an excellent score.
 
-  \end{headedsection}
+  \begin{addmargin}[0.5em]{0em}
+    {\large\bfseries PhD, Masters --- Physics}
+    \hfill {\bfseries University of California, Davis}
+    \begin{adjustwidth}{1ex}{0ex}
 
-  \begin{headedsection}{Bachelor of Science --- Physics}
-        {University of California, Santa Cruz}
-    \item Completed degree in $2.5$ years with $3.86$ in major GPA.
-    \item Received top grade in many classes, including \ComputationalPhysics{}
-          and \MathematicalMethods{}.
+    \begin{itemize}
+        [label=-, topsep=0pt, itemsep=0.5ex, parsep=0pt, leftmargin=1em]
+      \item Advanced coursework in statistical, quantum and condensed matter
+            physics.
+%     \item Passed multi-day end of year exam with an excellent score.
+    \end{itemize}
+    \end{adjustwidth}
+  \end{addmargin}
 
-  \end{headedsection}
+  \medskip
+
+  \begin{addmargin}[0.5em]{0em}
+    {\large\bfseries Bachelor of Science -- Physics}
+    \hfill {\bfseries Unversity of California, Santa Cruz}
+    \begin{adjustwidth}{1ex}{0ex}
+
+    \begin{itemize}
+      [label=-, topsep=0pt, itemsep=0.5ex, parsep=0pt, leftmargin=1em]
+      \item Completed degree in $2.5$ years with $3.86$ in major GPA.
+      \item Received top grade in many classes, including \ComputationalPhysics{}
+            and \MathematicalMethods{}.
+    \end{itemize}
+
+    \end{adjustwidth}
+  \end{addmargin}
+
 \end{mysection}
 
 \vfill
-
-\begin{center}
-    If you have any questions, please contact me at
-\end{center}
 
 \begin{center}
   \href{https://github.com/jgarst}{https://github.com/jgarst}
